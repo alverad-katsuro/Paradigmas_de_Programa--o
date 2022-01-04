@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "Fila.cpp"
 
-
+// Algoritmo base, isto é, teste de conceito a fim de facilitar o desenvolvimento da busca global.
+// Nele há a busca gulosa, que busca o minimo local.
 Fila* busca_gulosa(int x, int y,int matriz[TAMATRIZ][TAMATRIZ]) {
   Fila* fila; 
   Memo estado_atual = createMemo(x, y, matriz[x][y]);
@@ -35,6 +36,7 @@ Fila* busca_gulosa(int x, int y,int matriz[TAMATRIZ][TAMATRIZ]) {
   }
 }
 
+// Calcula o custo de um caminho
 int custoCaminho(Fila fila){
   int custo = 0;
   while (!isEmpty(&fila)){
@@ -44,6 +46,7 @@ int custoCaminho(Fila fila){
   return custo;
 }
 
+// Realiza a busca global, usando a Memoria para armazenar o melhor caminho a partir das coordenadas x e y
 Fila busca_global(int x, int y, Matriz* matriz, Memoria* memoria) {
   Fila fila_x = *inicializa(); 
   Fila fila_y = *inicializa();
@@ -117,22 +120,24 @@ Fila busca_global(int x, int y, Matriz* matriz, Memoria* memoria) {
   
 }
 
+// Chama a função que calcula o custo global recursivamente e exibe os resultados
 void showPath(int x, int y, Matriz* matriz){
   Memoria memoria = instancia_memoria();
   Fila fila = busca_global(x, y, matriz, &memoria);
   showQueue(&fila);
+  printf("O custo do caminho é: %d\n", custoCaminho(fila));
 }
 
 int main(int argc, char const *argv[]){
 
   int matriz_ext[TAMATRIZ][TAMATRIZ] = {
-    { 4,  7,  5,  0,  3,  8,  13  }, 
-    { 3,  5,  2,  1,  6,  1,  4   }, 
-    { 1,  3,  9,  11, 9,  1,  3   }, 
-    { 17, 3,  8,  4,  1,  8,  14  }, 
-    { 2,  0,  9,  5,  11, 0,  4   }, 
-    { 6,  4,  0,  2,  1,  10, 3   }, 
-    { 7,  13, 2,  0,  7,  1,  2   }
+    { 5, 9,  6,  4, 3, 8, 7 }, 
+    { 4, 1,  3,  5, 6, 8, 7 }, 
+    { 3, 1,  4,  5, 6, 8, 7 }, 
+    { 1, 3,  4,  5, 6, 8, 7 }, 
+    { 1, 3,  4,  5, 6, 8, 7 }, 
+    { 1, 3,  4,  5, 2, 7, 8 }, 
+    { 1, 3,  4,  5, 6, 7, 8 }
   };
 
   Matriz matriz;
