@@ -129,7 +129,7 @@ void showPath(int x, int y, Matriz* matriz){
 }
 
 int main(int argc, char const *argv[]){
-
+  // Matriz de entrada
   int matriz_ext[TAMATRIZ][TAMATRIZ] = {
     { 5, 9,  6,  4, 3, 8, 7 }, 
     { 4, 1,  3,  5, 6, 8, 7 }, 
@@ -140,13 +140,16 @@ int main(int argc, char const *argv[]){
     { 1, 3,  4,  5, 6, 7, 8 }
   };
 
+  // Instanciando a matriz (struct)
   Matriz matriz;
   for (int i = 0; i < TAMATRIZ; i++) {
     for (int k = 0; k < TAMATRIZ; k++) {
       matriz.matriz[i][k] = matriz_ext[i][k];
     }
   }
-  //Fila* fila = busca_gulosa(0, 0, matriz);
+  // Funções teste (rodam a gulosa)
+  // Fila* fila = busca_gulosa(0, 0, matriz);
   //showQueue(fila);
+  // Chamada da função da atividade
   showPath(0, 0, &matriz);
 }
