@@ -1,5 +1,5 @@
 #define MAXTAM 1000
-#define TAMATRIZ 3
+#define TAMATRIZ 7
 typedef int TipoApontador;
 
 typedef struct Memo{

@@ -124,8 +124,8 @@ void showPath(int x, int y, Matriz* matriz){
 }
 
 int main(int argc, char const *argv[]){
-  /*
-  int matriz[7][7] = {
+
+  int matriz_ext[TAMATRIZ][TAMATRIZ] = {
     { 4,  7,  5,  0,  3,  8,  13  }, 
     { 3,  5,  2,  1,  6,  1,  4   }, 
     { 1,  3,  9,  11, 9,  1,  3   }, 
@@ -134,12 +134,6 @@ int main(int argc, char const *argv[]){
     { 6,  4,  0,  2,  1,  10, 3   }, 
     { 7,  13, 2,  0,  7,  1,  2   }
   };
-  */
-  /* 
-  */
-  int matriz_ext[TAMATRIZ][TAMATRIZ] = {{1,0,15}, 
-                                        {10,10,11},
-                                        {11, 5, 7}};
 
   Matriz matriz;
   for (int i = 0; i < TAMATRIZ; i++) {
