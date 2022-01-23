@@ -1,0 +1,5 @@
+Compila arquivos sem a func main
+g++ -c printola.cpp 
+
+Cria o arquivo lib
+ar crv libprintola.a printola.o

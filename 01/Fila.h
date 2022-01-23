@@ -1,5 +1,5 @@
-#define MAXTAM 1000
-#define TAMATRIZ 7
+#define TAMATRIZ 40
+#define MAXTAM 900
 typedef int TipoApontador;
 
 // Memo --> guarda o estado atual, ou seja, o valor e a cordenada em um dado espaço
