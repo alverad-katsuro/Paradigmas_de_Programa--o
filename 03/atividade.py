@@ -1,3 +1,6 @@
+# Alfredo Gabriel de Sousa Oliveira - 202004940020
+# https://github.com/alverad-katsuro/Paradigmas_de_Programa--o
+
 #Usado para clonar list
 from copy import copy, deepcopy
 #Usado para gerar varias matrizes de teste
