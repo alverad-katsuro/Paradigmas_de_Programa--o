@@ -28,15 +28,15 @@ def remove_coluna(matriz: list, posicao = 0) -> list:
     return matriz
 
 #Função que localiza o eixo x durante a execução a fim de gravar o caminho na memoria evitar recalculo
-def acha_x(matriz, memoria):
+def acha_x(matriz, memoria) -> int:
   return len(memoria[0]) - len(matriz[0])
 
 #Função que localiza o eixo y durante a execução
-def acha_y(matriz, memoria):
+def acha_y(matriz, memoria) -> int:
   return len(memoria) - len(matriz)
 
 #Função que realiza a busca global recursivamente
-def busca_global(matriz):
+def busca_global(matriz) -> list:
   #Verifica se ja foi calculado consultando a memoria auxiliar
   if (len(memoria[acha_y(matriz, memoria)][acha_x(matriz, memoria)]) == 0):
     #Verifica se pode deslocar no eixo x
