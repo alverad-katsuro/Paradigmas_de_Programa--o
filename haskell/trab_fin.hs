@@ -215,10 +215,6 @@ menorRac (x:xs) (y:ys) = do
 
 -- ordenaRac :: [ [Int] ] -> [ [Int] ]
 
--- converLista :: Num a => [[a]] -> Num a => [[b]]
-converLista [] = []
-converLista (x:xs) = (x!!0) / (x!!1):(converLista xs)
-
 ordenaRac :: [ [Int] ] -> [ [Int] ]
 ordenaRac = genericSort (menorRac)
 
