@@ -47,7 +47,8 @@ pot5 = pot 5
 
 -- é possível fazer o mesmo com a função "potencia" ?
 
--- Resposta: Não é possivel, visto que é necessario passar uma tupla, com dois valores, como parametro.
+-- Resposta: Não é possivel, visto que é necessario passar uma tupla, com dois valores, como parametro a tupla é 1 unico dado diferente
+-- da função pot que possui dois dados diferentes.
 
 
 -- Crie um exemplo de aplicação parcial de função envolvendo
@@ -64,7 +65,6 @@ aplicFuncLst fun (x:xs) = [fun x] ++ aplicFuncLst fun xs
 
 
 resultado = aplicFuncLst pot5 [5,1,2,3,4]      
-
 
 -- 2) Desenvolva uma função que calcule o valor do enésimo elemento 
 -- da sequência de Fibonacci     n   0  1  2  3  4  5  6  7
